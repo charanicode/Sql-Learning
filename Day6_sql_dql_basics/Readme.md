@@ -1,37 +1,50 @@
-# Day 6 - SQL Fundamentals
+# 📅 Day 6 – SQL Fundamentals: Filtering, Sorting & Operators
 
-## Overview
-Today, I learned the fundamental concepts of SQL Server, including comparison operators, the WHERE clause, ORDER BY, logical operators, and wildcards. I practiced writing SQL queries to filter, sort, and retrieve specific records from a database.
+## 📌 Overview
 
-## Topics Covered
+Today, I explored essential SQL Server concepts used to filter, sort, and retrieve specific records from a database. I practiced comparison operators, the `WHERE` clause, `ORDER BY`, logical operators, and pattern matching using wildcards.
+
+## 📚 Topics Covered
 
 ### 1. Comparison Operators
-Used to compare values in SQL queries.
 
-- `=` – Equal to
-- `<>` – Not equal to
-- `>` – Greater than
-- `<` – Less than
-- `>=` – Greater than or equal to
-- `<=` – Less than or equal to
+Comparison operators are used to compare values and filter records based on specific conditions.
+
+| Operator | Description |
+|---|---|
+| `=` | Equal to |
+| `<>` | Not equal to |
+| `>` | Greater than |
+| `<` | Less than |
+| `>=` | Greater than or equal to |
+| `<=` | Less than or equal to |
+
+**Example:**
+```sql
+SELECT *
+FROM employee
+WHERE salary >= 30000;
+```
 
 ### 2. WHERE Clause
-Used to filter records based on specified conditions.
 
-Example:
+The `WHERE` clause filters rows based on a specified condition.
+
+**Example:**
 ```sql
 SELECT *
 FROM employee
 WHERE salary > 30000;
 ```
 
-### 3. ORDER BY
-Used to sort query results in ascending or descending order.
+### 3. ORDER BY Clause
 
-- `ASC` – Ascending order (default)
-- `DESC` – Descending order
+The `ORDER BY` clause sorts query results in ascending or descending order.
 
-Example:
+- `ASC` – Ascending order (default).
+- `DESC` – Descending order.
+
+**Example:**
 ```sql
 SELECT *
 FROM employee
@@ -39,42 +52,56 @@ ORDER BY salary DESC;
 ```
 
 ### 4. Logical Operators
-Used to combine or reverse conditions.
 
-- `AND` – All conditions must be true
-- `OR` – At least one condition must be true
-- `NOT` – Reverses a condition
+Logical operators combine multiple conditions or reverse a condition.
 
-Example:
+- `AND` – Returns rows when all specified conditions are true.
+- `OR` – Returns rows when at least one condition is true.
+- `NOT` – Reverses a condition.
+
+**Example:**
 ```sql
 SELECT *
 FROM employee
-WHERE salary > 30000 AND job = 'Developer';
+WHERE salary > 30000
+  AND job = 'Developer';
 ```
 
-### 5. Wildcards
-Used with the `LIKE` operator to search for patterns in text values.
+### 5. Wildcards and LIKE Operator
 
-- `%` – Represents zero or more characters
-- `_` – Represents exactly one character
+The `LIKE` operator searches for a specified pattern in character data.
 
-Example:
+| Wildcard | Description |
+|---|---|
+| `%` | Represents zero or more characters |
+| `_` | Represents exactly one character |
+
+**Example:**
 ```sql
 SELECT *
 FROM employee
 WHERE job LIKE 'Dev%';
 ```
 
-## Tools Used
+This query returns rows where the `job` value starts with `Dev`.
+
+## 🛠️ Tools Used
+
 - Microsoft SQL Server
 - SQL Server Management Studio (SSMS)
 
-## Key Learning Outcomes
-- Learned to compare values using SQL operators.
-- Practiced filtering records using `WHERE`.
-- Learned to sort records using `ORDER BY`.
-- Combined conditions using logical operators.
-- Practiced pattern matching using `LIKE` and wildcards.
+## 🎯 Key Learning Outcomes
 
----
-**Day 6 of My SQL Learning Journey**
+- Learned to compare values using SQL comparison operators.
+- Practiced filtering records using the `WHERE` clause.
+- Sorted query results using `ORDER BY`, `ASC`, and `DESC`.
+- Combined conditions using `AND`, `OR`, and `NOT`.
+- Practiced text pattern matching using `LIKE` and wildcards.
+
+## 🚀 Learning Progress
+
+This practice is part of my ongoing SQL learning journey. Through hands-on exercises, I am strengthening my querying skills and building a foundation for data analysis and entry-level Data Analyst roles.
+
+**Day 6 completed — one step closer to mastering SQL!** 💻📊
+
+#SQL #SQLServer #SQLPractice #DataAnalytics #LearningJourney
